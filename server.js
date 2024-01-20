@@ -13,8 +13,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // Connect to MariaDB database
 const pool = mariadb.createPool({
   host: 'localhost',
-  user: 'deepak',
-  password: '12345',
+  user: 'name',
+  password: 'password',
   database: 'my_node_app_db'
 });
 
@@ -86,7 +86,7 @@ app.post('/signup', async (req, res) => {
 });
 
 // Start the server
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
